@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Turbo Combat Racing</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">TURBO<span>COMBAT</span>RACING</div>
+    <div class="links">
+      <a href="#" data-page="home">Home</a>
+      <a href="#" data-page="about">About</a>
+      <a href="#" data-page="contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="page active">
+    <img src="assets/cover.svg" alt="Turbo Combat Racing cover" class="cover" />
+    <h1>Speed. Combat. Heat.</h1>
+    <p class="tag">Boost to go faster, but watch your heat. Shoot rivals, survive the laps.</p>
+    <button id="startBtn" class="neon-btn">START RACE</button>
+  </section>
+
+  <!-- CAR SELECT -->
+  <section id="select" class="page">
+    <h2>Choose Your Car</h2>
+    <div id="carGrid" class="car-grid"></div>
+    <button id="goBtn" class="neon-btn" disabled>GO</button>
+  </section>
+
+  <!-- GAME -->
+  <section id="game" class="page">
+    <div class="hud">
+      <div>LAP <b id="hudLap">1/3</b></div>
+      <div>SPEED <b id="hudSpeed">0</b></div>
+      <div class="bar"><label>HEALTH</label><i id="hudHealth"></i></div>
+      <div class="bar"><label>HEAT</label><i id="hudHeat" class="heat"></i></div>
+      <div>AMMO <b id="hudAmmo">30</b></div>
+    </div>
+    <canvas id="canvas" width="960" height="600"></canvas>
+    <p class="help">W/Up: accelerate &middot; S/Down: brake &middot; A/D or Left/Right: steer &middot; Shift: boost &middot; Space: shoot</p>
+  </section>
+
+  <!-- RESULT -->
+  <section id="result" class="page">
+    <h2 id="resultTitle">Race Over</h2>
+    <p id="resultText"></p>
+    <button id="againBtn" class="neon-btn">RACE AGAIN</button>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="page">
+    <h2>About</h2>
+    <p>Turbo Combat Racing is a browser arcade game built with HTML5 Canvas and plain JavaScript. Three systems drive the gameplay: speed, combat, and resource management (health and heat).</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="page">
+    <h2>Contact</h2>
+    <p>GitHub: <a href="https://github.com/piyushsingh114" target="_blank" rel="noopener">piyushsingh114</a></p>
+  </section>
+
+  <script src="js/cars.js"></script>
+  <script src="js/collision.js"></script>
+  <script src="js/heat.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
